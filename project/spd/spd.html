@@ -1,0 +1,133 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Zhiqi Yin">
+  <meta name="keywords" content="computer animation, physics based character control, stable PD control">
+
+  <!-- source sans pro font -->
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  <!-- bootstrap style -->
+  <link rel="stylesheet" type="text/css" href="../../src/bootstrap/css/bootstrap.min.css" >
+  <!-- font awesome style -->
+  <link rel="stylesheet" type="text/css" href="../../src/font-awesome/css/font-awesome.min.css">
+  <!-- costum style -->
+  <link rel="stylesheet" type="text/css" href="../../src/costum_style.css">
+
+  <!-- javascript -->
+  <script src="../../src/jquery-3.2.1.min.js"></script>
+  <script src="../../src/bootstrap/js/bootstrap.min.js"></script>
+  
+  <!-- page information -->
+  <title>SPD</title>
+
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115451279-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-115451279-2');
+  </script>
+</head>
+
+<body>
+  <div class="container">
+  <div class="content">
+    <a class="btn btn-info btn-sm" href="../../index.html"> Zhiqi Yin's Homepage </a> 
+
+    <h1 class="project-title">Linear Time Stable PD Controllers for<br/> Physics-based Character Animation</h1>
+    <h1 class="project-title"><small> ACM SIGGRAPH/Eurographics Symposium on Computer Animation 2020 </small></h1>
+
+    <!-- authors -->
+    <div class="row project-author">
+      <a href="" class="col-xs-4"></a>
+      <a target="_blank" href="http://arpspoof.github.io" class="col-xs-2"> Zhiqi Yin </a>
+      <a target="_blank" href="https://www.cs.sfu.ca/~kkyin/" class="col-xs-2"> KangKang Yin </a>
+      <a href="" class="col-xs-4"></a>
+    </div>
+
+    <br>
+
+    <!-- institutes -->
+    <div class="row project-institute">
+      <a target="_blank" href="https://www.sfu.ca" class="col-xs-12"> Simon Fraser University </a>
+    </div>
+
+    <!-- cover -->
+    <div class="project-cover">
+      <img src="teaser.png" width="100%">
+    </div>
+    
+    <!-- abstract -->
+    <div class="project-abstract">
+      <h2 class="page-header"> Abstract </h2>
+      <p>
+      In physics-based character animation, Proportional-Derivative (PD) controllers are commonly used for tracking reference
+      motions in motor control tasks. Stable PD (SPD) controllers significantly improve the numerical stability of traditional PD
+      controllers and support large gains and large integration time steps during simulation. For an articulated rigid body
+      system with n degrees of freedom, all SPD implementations to date, however, use an O(n^3) dense matrix factorization based
+      method. In this paper, we propose a linear time algorithm for SPD computation, which is based on Featherstone’s forward
+      dynamics formulation for articulated rigid body systems in generalized coordinates. We demonstrate the performance
+      advantage of our algorithm by comparing with both the conventional dense matrix factorization based method and an alternative sparse matrix factorization based method. 
+      We show that the proposed algorithm provides superior stability when controlling
+      complex models at large time steps. We further demonstrate that our algorithm can improve the learning speed and quality of a
+      Deep Reinforcement Learning (DRL) system for physics-based character animation.
+      </p>
+    </div>
+
+    <div class="row project-content">
+      <div class="col-xs-3">
+        <img src="first_page.png" class="img-thumbnail" width="100%">
+      </div>
+      <dir class="col-xs-9" style="margin: auto">
+        <div> 
+          <h3>Paper</h3>
+          <a class="btn btn-info btn-sm" href="https://www.cs.sfu.ca/~kkyin/papers/fastSPD.pdf"> pdf (0.5 MB)</a> 
+          <!-- <a class="btn btn-info btn-sm" href="hairyball/PG2019_Direction_Invariant_low.pdf"> low resolution (1.9 MB)</a>  -->
+        </div>
+
+        <!--div>
+          <h3>Cite</h3>
+          <b class="btn btn-info btn-sm" data-toggle="modal" data-target="#Bibtex"> BibTex </b>
+          <div id="Bibtex" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <iframe width="100%" scrolling="auto" frameborder="0" type="text" src="hairyball/direction_invariant.txt"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div -->
+
+        <div>
+            <h3>Video</h3>
+            <a class="btn btn-info btn-sm" href="https://www.cs.sfu.ca/~kkyin/papers/fastSPD.mp4"> video (140 MB)</a> 
+        </div>
+      </dir>
+    </div>
+    
+    <!--div class="project-video">
+      <h2 class="page-header"> Videos </h2>
+      <div class="row"  align="middle">
+        <div class="col-xs-6">
+          <h4> Video on YouTube </h4>
+          <iframe width="480" height="270" 
+            src="https://youtu.be/z6JBpiA4QEs" 
+            frameborder="0" allowfullscreen>
+          </iframe>
+        </div>
+        <div class="col-xs-6">
+          <h4> Video on YouKu </h4>
+          <iframe width="480" height="270"
+            src="https://player.youku.com/embed/XMzAzMDM5NjM3Mg==" 
+            frameborder=0 allowfullscreen>
+          </iframe>
+        </div>
+      </div>  
+    </div-->
+
+  </div>
+  </div>
+</body>
